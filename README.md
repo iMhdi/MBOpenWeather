@@ -1,6 +1,5 @@
 # MBOpenWeather
 
-[![CI Status](https://img.shields.io/travis/m.boukhris@gmail.com/MBOpenWeather.svg?style=flat)](https://travis-ci.org/m.boukhris@gmail.com/MBOpenWeather)
 [![Version](https://img.shields.io/cocoapods/v/MBOpenWeather.svg?style=flat)](https://cocoapods.org/pods/MBOpenWeather)
 [![License](https://img.shields.io/cocoapods/l/MBOpenWeather.svg?style=flat)](https://cocoapods.org/pods/MBOpenWeather)
 [![Platform](https://img.shields.io/cocoapods/p/MBOpenWeather.svg?style=flat)](https://cocoapods.org/pods/MBOpenWeather)

@@ -1,0 +1,6 @@
+framework module MBOpenWeather {
+  umbrella header "MBOpenWeather-umbrella.h"
+
+  export *
+  module * { export * }
+}

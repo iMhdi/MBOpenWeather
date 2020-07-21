@@ -1,0 +1,16 @@
+PODS:
+  - MBOpenWeather (0.1.0)
+
+DEPENDENCIES:
+  - MBOpenWeather (from `../`)
+
+EXTERNAL SOURCES:
+  MBOpenWeather:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MBOpenWeather: 319accc95cb923444f1df3eefd3ae8bfd696ead2
+
+PODFILE CHECKSUM: e2e48faabe75f6bfdf34dcc8ccc4b7e275fa3400
+
+COCOAPODS: 1.8.4

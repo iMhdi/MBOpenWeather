@@ -41,11 +41,11 @@
 		607FACE51AFB9204008FA782 /* MBOpenWeather_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBOpenWeather_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		A5A3E032ADBA6E0D3BDA1F82 /* MBOpenWeather.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = MBOpenWeather.podspec; path = ../MBOpenWeather.podspec; sourceTree = "<group>"; };
+		A5A3E032ADBA6E0D3BDA1F82 /* MBOpenWeather.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = MBOpenWeather.podspec; path = ../MBOpenWeather.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C9793E38CE0320AFFBF686FE /* Pods_MBOpenWeather_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBOpenWeather_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB369037FA2E2FB756FD08AA /* Pods_MBOpenWeather_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBOpenWeather_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E86C95D27ABF213B81C63864 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F256CDD648051398C3F78983 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		E86C95D27ABF213B81C63864 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		F256CDD648051398C3F78983 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		FB629CDEAE792F6BADC8387F /* Pods-MBOpenWeather_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Tests.release.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,7 +156,6 @@
 				378376A55FE6F4D4FAD634B8 /* Pods-MBOpenWeather_Tests.debug.xcconfig */,
 				FB629CDEAE792F6BADC8387F /* Pods-MBOpenWeather_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -190,7 +189,7 @@
 				607FACE11AFB9204008FA782 /* Sources */,
 				607FACE21AFB9204008FA782 /* Frameworks */,
 				607FACE31AFB9204008FA782 /* Resources */,
-				3817B687B5CC21F64DD4EF12 /* [CP] Embed Pods Frameworks */,
+				D6BC66046DAAA619E81B20C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,6 +227,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -263,24 +263,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3817B687B5CC21F64DD4EF12 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FBSnapshotTestCase/FBSnapshotTestCase.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		53BEE85BC41F5AB3BC4CC8ED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -319,6 +301,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6BC66046DAAA619E81B20C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MBOpenWeather/MBOpenWeather.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBOpenWeather.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ED20052CB0FB924460A0C0F3 /* [CP] Check Pods Manifest.lock */ = {

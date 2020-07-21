@@ -21,7 +21,7 @@ pod 'MBOpenWeather'
 
 ## Author
 
-m.boukhris@gmail.com, m.boukhris@gmail.com
+m.boukhris@gmail.com,
 
 ## License
 

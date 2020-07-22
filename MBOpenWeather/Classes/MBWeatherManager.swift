@@ -8,8 +8,7 @@
 
 import Foundation
 
-//fileprivate let BASE_URL = "http://api.openweathermap.org/data/2.5/"
-fileprivate let BASE_URL = "https://samples.openweathermap.org/data/2.5/"
+fileprivate let BASE_URL = "http://api.openweathermap.org/data/2.5/"
 
 fileprivate let ENDPOINT_WEATHER = BASE_URL + "weather"
 

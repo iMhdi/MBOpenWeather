@@ -7,9 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AD0167924C8B53D009EFEEB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0167624C8B53D009EFEEB /* HomeViewController.xib */; };
+		2AD0167A24C8B53D009EFEEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0167724C8B53D009EFEEB /* HomeViewController.swift */; };
+		2AD0167B24C8B53D009EFEEB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0167824C8B53D009EFEEB /* HomePresenter.swift */; };
+		2AD0168724C8B5DC009EFEEB /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0168024C8B5DC009EFEEB /* UIViewController+Extension.swift */; };
+		2AD0168824C8B5DC009EFEEB /* ControllerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0168224C8B5DC009EFEEB /* ControllerManager.swift */; };
+		2AD0168924C8B5DC009EFEEB /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0168424C8B5DC009EFEEB /* Navigator.swift */; };
+		2AD0168A24C8B5DC009EFEEB /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0168624C8B5DC009EFEEB /* AppNavigator.swift */; };
+		2AD016A224C8B7BA009EFEEB /* CityDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0169B24C8B7BA009EFEEB /* CityDetailsViewController.xib */; };
+		2AD016A324C8B7BA009EFEEB /* CityDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0169C24C8B7BA009EFEEB /* CityDetailsPresenter.swift */; };
+		2AD016A424C8B7BA009EFEEB /* CityDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0169D24C8B7BA009EFEEB /* CityDetailsViewController.swift */; };
+		2AD016A524C8B7BA009EFEEB /* NewCityFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0169F24C8B7BA009EFEEB /* NewCityFormViewController.xib */; };
+		2AD016A624C8B7BA009EFEEB /* NewCityFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD016A024C8B7BA009EFEEB /* NewCityFormViewController.swift */; };
+		2AD016A724C8B7BA009EFEEB /* NewCityFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD016A124C8B7BA009EFEEB /* NewCityFormPresenter.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
-		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
@@ -29,13 +40,24 @@
 
 /* Begin PBXFileReference section */
 		29EC6272812AEF92C17C7285 /* Pods-MBOpenWeather_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Example.debug.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2AD0167624C8B53D009EFEEB /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		2AD0167724C8B53D009EFEEB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2AD0167824C8B53D009EFEEB /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		2AD0168024C8B5DC009EFEEB /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		2AD0168224C8B5DC009EFEEB /* ControllerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerManager.swift; sourceTree = "<group>"; };
+		2AD0168424C8B5DC009EFEEB /* Navigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		2AD0168624C8B5DC009EFEEB /* AppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		2AD0169B24C8B7BA009EFEEB /* CityDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CityDetailsViewController.xib; sourceTree = "<group>"; };
+		2AD0169C24C8B7BA009EFEEB /* CityDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDetailsPresenter.swift; sourceTree = "<group>"; };
+		2AD0169D24C8B7BA009EFEEB /* CityDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityDetailsViewController.swift; sourceTree = "<group>"; };
+		2AD0169F24C8B7BA009EFEEB /* NewCityFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCityFormViewController.xib; sourceTree = "<group>"; };
+		2AD016A024C8B7BA009EFEEB /* NewCityFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCityFormViewController.swift; sourceTree = "<group>"; };
+		2AD016A124C8B7BA009EFEEB /* NewCityFormPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCityFormPresenter.swift; sourceTree = "<group>"; };
 		378376A55FE6F4D4FAD634B8 /* Pods-MBOpenWeather_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EFF83518F8807E45903DD8B /* Pods-MBOpenWeather_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Example.release.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* MBOpenWeather_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBOpenWeather_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* MBOpenWeather_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MBOpenWeather_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +91,98 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2AD0167424C8B53D009EFEEB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2AD0167524C8B53D009EFEEB /* Home */,
+				2AD0169A24C8B7BA009EFEEB /* CityDetails */,
+				2AD0169E24C8B7BA009EFEEB /* NewCityForm */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2AD0167524C8B53D009EFEEB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				2AD0167724C8B53D009EFEEB /* HomeViewController.swift */,
+				2AD0167824C8B53D009EFEEB /* HomePresenter.swift */,
+				2AD0167624C8B53D009EFEEB /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2AD0167E24C8B5DC009EFEEB /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2AD0168524C8B5DC009EFEEB /* AppNavigator */,
+				2AD0168124C8B5DC009EFEEB /* ControllerFactory */,
+				2AD0167F24C8B5DC009EFEEB /* Extensions */,
+				2AD0168324C8B5DC009EFEEB /* Protocols */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		2AD0167F24C8B5DC009EFEEB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2AD0168024C8B5DC009EFEEB /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2AD0168124C8B5DC009EFEEB /* ControllerFactory */ = {
+			isa = PBXGroup;
+			children = (
+				2AD0168224C8B5DC009EFEEB /* ControllerManager.swift */,
+			);
+			path = ControllerFactory;
+			sourceTree = "<group>";
+		};
+		2AD0168324C8B5DC009EFEEB /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				2AD0168424C8B5DC009EFEEB /* Navigator.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		2AD0168524C8B5DC009EFEEB /* AppNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				2AD0168624C8B5DC009EFEEB /* AppNavigator.swift */,
+			);
+			path = AppNavigator;
+			sourceTree = "<group>";
+		};
+		2AD0168B24C8B5F8009EFEEB /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				607FACDC1AFB9204008FA782 /* Images.xcassets */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		2AD0169A24C8B7BA009EFEEB /* CityDetails */ = {
+			isa = PBXGroup;
+			children = (
+				2AD0169D24C8B7BA009EFEEB /* CityDetailsViewController.swift */,
+				2AD0169C24C8B7BA009EFEEB /* CityDetailsPresenter.swift */,
+				2AD0169B24C8B7BA009EFEEB /* CityDetailsViewController.xib */,
+			);
+			path = CityDetails;
+			sourceTree = "<group>";
+		};
+		2AD0169E24C8B7BA009EFEEB /* NewCityForm */ = {
+			isa = PBXGroup;
+			children = (
+				2AD016A024C8B7BA009EFEEB /* NewCityFormViewController.swift */,
+				2AD016A124C8B7BA009EFEEB /* NewCityFormPresenter.swift */,
+				2AD0169F24C8B7BA009EFEEB /* NewCityFormViewController.xib */,
+			);
+			path = NewCityForm;
+			sourceTree = "<group>";
+		};
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
@@ -94,10 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
-				607FACD91AFB9204008FA782 /* Main.storyboard */,
-				607FACDC1AFB9204008FA782 /* Images.xcassets */,
-				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
+				2AD0167424C8B53D009EFEEB /* Scenes */,
+				2AD0168B24C8B5F8009EFEEB /* Ressources */,
+				2AD0167E24C8B5DC009EFEEB /* Utilities */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
 			name = "Example for MBOpenWeather";
@@ -247,9 +360,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				2AD016A224C8B7BA009EFEEB /* CityDetailsViewController.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				2AD0167924C8B53D009EFEEB /* HomeViewController.xib in Resources */,
+				2AD016A524C8B7BA009EFEEB /* NewCityFormViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,8 +465,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				2AD016A424C8B7BA009EFEEB /* CityDetailsViewController.swift in Sources */,
+				2AD0168824C8B5DC009EFEEB /* ControllerManager.swift in Sources */,
+				2AD016A624C8B7BA009EFEEB /* NewCityFormViewController.swift in Sources */,
+				2AD016A724C8B7BA009EFEEB /* NewCityFormPresenter.swift in Sources */,
+				2AD0168724C8B5DC009EFEEB /* UIViewController+Extension.swift in Sources */,
+				2AD0168A24C8B5DC009EFEEB /* AppNavigator.swift in Sources */,
+				2AD0167B24C8B53D009EFEEB /* HomePresenter.swift in Sources */,
+				2AD016A324C8B7BA009EFEEB /* CityDetailsPresenter.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				2AD0167A24C8B53D009EFEEB /* HomeViewController.swift in Sources */,
+				2AD0168924C8B5DC009EFEEB /* Navigator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,14 +498,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		607FACD91AFB9204008FA782 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				607FACDA1AFB9204008FA782 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		607FACDE1AFB9204008FA782 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

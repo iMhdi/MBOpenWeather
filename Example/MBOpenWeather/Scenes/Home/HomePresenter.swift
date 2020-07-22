@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import CoreLocation
+import MBOpenWeather
 
 protocol HomePresenterProtocol: class {
     var view:HomeViewProtocol? { get set }
+    
+    func loadSavedLocations() -> [MBWeatherModel]?
+    func requestLocationUpdates()
 }
 
 class HomePresenter {
@@ -22,9 +27,38 @@ class HomePresenter {
     // MARK: - Initialization
     init(view:HomeViewProtocol) {
         self.view = view
+        LocationManager.shared.delegate = self
     }
 }
 
 extension HomePresenter: HomePresenterProtocol {
     
+    func loadSavedLocations() -> [MBWeatherModel]? {
+        return LocalStorageManager.loadWeatherInfo()
+    }
+    
+    func requestLocationUpdates() {
+        LocationManager.shared.requestLocationUpdates()
+    }
+}
+
+extension HomePresenter: LocationManagerDelegate {
+    func locationManagerDidReceiveLocation(currentLocation: CLLocation) {
+        LocationManager.shared.stopUpdatingLocation()
+        
+        let lat = currentLocation.coordinate.latitude
+        let lng = currentLocation.coordinate.longitude
+        
+        view?.startLoading()
+        MBWeatherManager.shared.weatherInfo(forLatitude: lat, longitude: lng, withSuccess: { weatherInfo in
+            self.view?.stopLoading()
+            self.view?.didReceiveWeatherInfo(weatherInfo)
+        }) { error in
+            self.view?.stopLoading()
+        }
+    }
+    
+    func locationManagerDidFailWithError(error: NSError) {
+        
+    }    
 }

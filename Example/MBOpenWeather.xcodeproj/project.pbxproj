@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A6D241824C8D3C90078ED0F /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D241724C8D3C90078ED0F /* LocalStorageManager.swift */; };
+		2A6D242224C8DCF40078ED0F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6D242124C8DCF40078ED0F /* MapKit.framework */; };
+		2A6D242924C8ED510078ED0F /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D242724C8ED510078ED0F /* LocationCell.swift */; };
+		2A6D242A24C8ED510078ED0F /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6D242824C8ED510078ED0F /* LocationCell.xib */; };
 		2AD0167924C8B53D009EFEEB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0167624C8B53D009EFEEB /* HomeViewController.xib */; };
 		2AD0167A24C8B53D009EFEEB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0167724C8B53D009EFEEB /* HomeViewController.swift */; };
 		2AD0167B24C8B53D009EFEEB /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD0167824C8B53D009EFEEB /* HomePresenter.swift */; };
@@ -20,6 +24,8 @@
 		2AD016A524C8B7BA009EFEEB /* NewCityFormViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2AD0169F24C8B7BA009EFEEB /* NewCityFormViewController.xib */; };
 		2AD016A624C8B7BA009EFEEB /* NewCityFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD016A024C8B7BA009EFEEB /* NewCityFormViewController.swift */; };
 		2AD016A724C8B7BA009EFEEB /* NewCityFormPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD016A124C8B7BA009EFEEB /* NewCityFormPresenter.swift */; };
+		2AD016A924C8BE2D009EFEEB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AD016A824C8BE2D009EFEEB /* CoreLocation.framework */; };
+		2AD016AB24C8BFEE009EFEEB /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD016AA24C8BFEE009EFEEB /* LocationManager.swift */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -40,6 +46,10 @@
 
 /* Begin PBXFileReference section */
 		29EC6272812AEF92C17C7285 /* Pods-MBOpenWeather_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Example.debug.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2A6D241724C8D3C90078ED0F /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
+		2A6D242124C8DCF40078ED0F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		2A6D242724C8ED510078ED0F /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		2A6D242824C8ED510078ED0F /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		2AD0167624C8B53D009EFEEB /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		2AD0167724C8B53D009EFEEB /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2AD0167824C8B53D009EFEEB /* HomePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
@@ -53,6 +63,8 @@
 		2AD0169F24C8B7BA009EFEEB /* NewCityFormViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewCityFormViewController.xib; sourceTree = "<group>"; };
 		2AD016A024C8B7BA009EFEEB /* NewCityFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCityFormViewController.swift; sourceTree = "<group>"; };
 		2AD016A124C8B7BA009EFEEB /* NewCityFormPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCityFormPresenter.swift; sourceTree = "<group>"; };
+		2AD016A824C8BE2D009EFEEB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		2AD016AA24C8BFEE009EFEEB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		378376A55FE6F4D4FAD634B8 /* Pods-MBOpenWeather_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EFF83518F8807E45903DD8B /* Pods-MBOpenWeather_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Example.release.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* MBOpenWeather_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBOpenWeather_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6D242224C8DCF40078ED0F /* MapKit.framework in Frameworks */,
+				2AD016A924C8BE2D009EFEEB /* CoreLocation.framework in Frameworks */,
 				809D1F9EC754641D700B2B70 /* Pods_MBOpenWeather_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -91,6 +105,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A6D241924C8D3D10078ED0F /* LocalStorageManager */ = {
+			isa = PBXGroup;
+			children = (
+				2A6D241724C8D3C90078ED0F /* LocalStorageManager.swift */,
+			);
+			path = LocalStorageManager;
+			sourceTree = "<group>";
+		};
+		2A6D241E24C8D8210078ED0F /* LocationCell */ = {
+			isa = PBXGroup;
+			children = (
+				2A6D242724C8ED510078ED0F /* LocationCell.swift */,
+				2A6D242824C8ED510078ED0F /* LocationCell.xib */,
+			);
+			path = LocationCell;
+			sourceTree = "<group>";
+		};
 		2AD0167424C8B53D009EFEEB /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +138,7 @@
 				2AD0167724C8B53D009EFEEB /* HomeViewController.swift */,
 				2AD0167824C8B53D009EFEEB /* HomePresenter.swift */,
 				2AD0167624C8B53D009EFEEB /* HomeViewController.xib */,
+				2A6D241E24C8D8210078ED0F /* LocationCell */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -115,7 +147,9 @@
 			isa = PBXGroup;
 			children = (
 				2AD0168524C8B5DC009EFEEB /* AppNavigator */,
+				2AD016AC24C8BFF3009EFEEB /* LocationManager */,
 				2AD0168124C8B5DC009EFEEB /* ControllerFactory */,
+				2A6D241924C8D3D10078ED0F /* LocalStorageManager */,
 				2AD0167F24C8B5DC009EFEEB /* Extensions */,
 				2AD0168324C8B5DC009EFEEB /* Protocols */,
 			);
@@ -181,6 +215,14 @@
 				2AD0169F24C8B7BA009EFEEB /* NewCityFormViewController.xib */,
 			);
 			path = NewCityForm;
+			sourceTree = "<group>";
+		};
+		2AD016AC24C8BFF3009EFEEB /* LocationManager */ = {
+			isa = PBXGroup;
+			children = (
+				2AD016AA24C8BFEE009EFEEB /* LocationManager.swift */,
+			);
+			path = LocationManager;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -255,6 +297,8 @@
 		818004A913BEBB81E2C01ED5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2A6D242124C8DCF40078ED0F /* MapKit.framework */,
+				2AD016A824C8BE2D009EFEEB /* CoreLocation.framework */,
 				C9793E38CE0320AFFBF686FE /* Pods_MBOpenWeather_Example.framework */,
 				DB369037FA2E2FB756FD08AA /* Pods_MBOpenWeather_Tests.framework */,
 			);
@@ -360,6 +404,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A6D242A24C8ED510078ED0F /* LocationCell.xib in Resources */,
 				2AD016A224C8B7BA009EFEEB /* CityDetailsViewController.xib in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -466,13 +511,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AD016A424C8B7BA009EFEEB /* CityDetailsViewController.swift in Sources */,
+				2A6D241824C8D3C90078ED0F /* LocalStorageManager.swift in Sources */,
 				2AD0168824C8B5DC009EFEEB /* ControllerManager.swift in Sources */,
 				2AD016A624C8B7BA009EFEEB /* NewCityFormViewController.swift in Sources */,
 				2AD016A724C8B7BA009EFEEB /* NewCityFormPresenter.swift in Sources */,
+				2A6D242924C8ED510078ED0F /* LocationCell.swift in Sources */,
 				2AD0168724C8B5DC009EFEEB /* UIViewController+Extension.swift in Sources */,
 				2AD0168A24C8B5DC009EFEEB /* AppNavigator.swift in Sources */,
 				2AD0167B24C8B53D009EFEEB /* HomePresenter.swift in Sources */,
 				2AD016A324C8B7BA009EFEEB /* CityDetailsPresenter.swift in Sources */,
+				2AD016AB24C8BFEE009EFEEB /* LocationManager.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				2AD0167A24C8B53D009EFEEB /* HomeViewController.swift in Sources */,
 				2AD0168924C8B5DC009EFEEB /* Navigator.swift in Sources */,
@@ -554,7 +602,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -600,7 +648,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

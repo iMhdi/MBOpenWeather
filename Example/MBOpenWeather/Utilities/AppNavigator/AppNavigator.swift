@@ -30,7 +30,9 @@ class AppNavigator: UINavigationController, Navigator {
     override init(rootViewController: UIViewController) {
         super.init(rootViewController: rootViewController)
         
-        self.isNavigationBarHidden      =   true
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        self.navigationBar.titleTextAttributes = textAttributes
+        self.navigationBar.barTintColor = .black
     }
     
     required init?(coder aDecoder: NSCoder) {

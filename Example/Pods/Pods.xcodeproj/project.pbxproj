@@ -118,9 +118,9 @@
 		140C9A5FE39D96F5EB8A19B8EA0A9A60 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				6076C9512137F931DA81434E6C9B90C5 /* MBRequestWrapper.swift */,
 				466278F28205C8F62E9926A4A89BBFFD /* CharacterSet+Extension.swift */,
 				824EBBBDE9BC410BD74292414E04DAD8 /* Dictionary+Extension.swift */,
-				6076C9512137F931DA81434E6C9B90C5 /* MBRequestWrapper.swift */,
 			);
 			name = Utilities;
 			path = MBOpenWeather/Classes/Utilities;

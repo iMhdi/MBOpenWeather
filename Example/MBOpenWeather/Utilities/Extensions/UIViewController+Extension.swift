@@ -39,4 +39,13 @@ extension UIViewController {
     var navController:AppNavigator {
         return self.navigationController as! AppNavigator
     }
+    
+    func displayAlert(withMessage message: String, andCompletionHandler handler: ((UIAlertAction) -> Void)? = nil) {
+        let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        //We add buttons to the alert controller by creating UIAlertActions:
+        let actionOk = UIAlertAction(title: "OK", style: .default, handler: handler)
+
+        alertController.addAction(actionOk)
+        self.present(alertController, animated: true, completion: nil)
+    }
 }

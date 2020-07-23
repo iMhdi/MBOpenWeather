@@ -26,7 +26,6 @@ class HomeViewController: UIViewController {
     lazy var presenter:HomePresenterProtocol = HomePresenter(view: self)
       
     // MARK: - Private properties
-    var savedLocations: [MBWeatherModel]?
     
     // MARK: - View lifecycle
   
@@ -37,12 +36,13 @@ class HomeViewController: UIViewController {
         
         locationsTableView.register(UINib(nibName: "LocationCell", bundle: nil), forCellReuseIdentifier: "LocationCell")
 
-        savedLocations = presenter.loadSavedLocations()
         reloadTableView()
     }
   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didUpdateLocationsList), name: NSNotification.Name(rawValue: NOTIFICATION_CENTER_LIST_UPDATED), object: nil)
     }
   
     // MARK: - Display logic
@@ -60,8 +60,7 @@ class HomeViewController: UIViewController {
     }
     
     @objc func didSelectAddNewLocation(sender: UIBarButtonItem) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.appNavigator?.navigate(to: .newCityForm, withStyle: .present)
+        navController.navigate(to: .newCityForm, withStyle: .present)
     }
     
     // MARK: - Overrides
@@ -69,7 +68,7 @@ class HomeViewController: UIViewController {
     // MARK: - Private functions
     
     func reloadTableView() {
-        if let savedLocations = savedLocations, savedLocations.count > 0 {
+        if LocalStorageManager.shared.savedLocations.count > 0 {
             locationsTableView.isHidden = false
             emptyViewContainer.isHidden = true
         } else {
@@ -78,6 +77,10 @@ class HomeViewController: UIViewController {
         }
         
         locationsTableView.reloadData()
+    }
+    
+    @objc private func didUpdateLocationsList(notification: NSNotification){
+        reloadTableView()
     }
 }
 
@@ -92,12 +95,7 @@ extension HomeViewController:  HomeViewProtocol {
     }
     
     func didReceiveWeatherInfo(_ weatherInfo: MBWeatherModel) {
-        if (savedLocations == nil) {
-            savedLocations = [MBWeatherModel]()
-        }
-        
-        savedLocations!.append(weatherInfo)
-        LocalStorageManager.saveWeatherInfo(weatherInfoArray: savedLocations!)
+        LocalStorageManager.shared.addWeatherInfo(weatherInfo: weatherInfo)
         
         reloadTableView()
     }
@@ -105,11 +103,7 @@ extension HomeViewController:  HomeViewProtocol {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if let savedLocations = savedLocations {
-            return savedLocations.count
-        }
-        
-        return 0
+        return LocalStorageManager.shared.savedLocations.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -119,7 +113,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationCell
 
-        let weatherInfo = savedLocations![indexPath.row]
+        let weatherInfo = LocalStorageManager.shared.savedLocations[indexPath.row]
         cell.setLocation(withCity: weatherInfo.name, country: weatherInfo.sys?.country, latitude: weatherInfo.coord?.lat, longitude: weatherInfo.coord?.lon)
         cell.selectionStyle = .none
         
@@ -127,7 +121,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.appNavigator?.navigate(to: .cityDetails, withStyle: .present)
+        navController.navigate(to: .cityDetails, withStyle: .present)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            LocalStorageManager.shared.deleteWeatherInfo(atIndex: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.reloadTableView()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCellEditingStyle {
+        return .delete
+    }    
 }

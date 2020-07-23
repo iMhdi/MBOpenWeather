@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import MBOpenWeather
 
 protocol NewCityFormPresenterProtocol: class {
     var view:NewCityFormViewProtocol? { get set }
+    
+    func weatherInformation(withCity cityName: String)
 }
 
 class NewCityFormPresenter {
@@ -26,5 +29,14 @@ class NewCityFormPresenter {
 }
 
 extension NewCityFormPresenter: NewCityFormPresenterProtocol {
-    
+    func weatherInformation(withCity cityName: String) {
+        view?.startLoading()
+        MBWeatherManager.shared.weatherInfo(forCityName: cityName, withSuccess: { weatherInfo in
+            self.view?.stopLoading()
+            self.view?.displayCityAddConfirmation(cityName: cityName, weatherInfo: weatherInfo)
+        }) { error in
+            self.view?.stopLoading()
+            self.view?.displayCityAddError(error: error.localizedDescription)
+        }
+    }
 }

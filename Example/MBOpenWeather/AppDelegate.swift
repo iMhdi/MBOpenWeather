@@ -18,8 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window                          =   UIWindow(frame: UIScreen.main.bounds)
 
-        MBWeatherManager.shared.setAPIKey("e6f01a504b6a46e79560c140323f2113")
-
+        MBWeatherManager.shared.setAPIKey(API_KEY)
+        LocalStorageManager.shared.loadWeatherInfos()
+        
         appNavigator                    =   AppNavigator.startApp()
         window?.rootViewController      =   appNavigator
         

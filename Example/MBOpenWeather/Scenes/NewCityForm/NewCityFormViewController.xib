@@ -10,6 +10,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewCityFormViewController" customModule="MBOpenWeather_Example" customModuleProvider="target">
             <connections>
+                <outlet property="addCityButton" destination="r47-t3-jni" id="COc-ij-JBs"/>
+                <outlet property="cityNameTextfield" destination="Ba5-vz-NQ0" id="R6R-E1-zc3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,9 +19,106 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <viewLayoutGuide key="safeArea" id="70Q-Xj-itn"/>
-            <point key="canvasLocation" x="53.3203125" y="47.65625"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="dDx-gp-MAG">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KlS-6n-i3h" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="191.33333333333334"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to get weather information for a new location ? Add it here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSU-qx-LRF">
+                                    <rect key="frame" x="16" y="70" width="382" height="57.333333333333343"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a4u-Yd-oJm">
+                                    <rect key="frame" x="16" y="143.33333333333334" width="314" height="32"/>
+                                    <subviews>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter city name (ex : Paris)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ba5-vz-NQ0">
+                                            <rect key="frame" x="8" y="0.0" width="306" height="32"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="didEditTextfieldContent:" destination="-1" eventType="editingChanged" id="BOt-fJ-84h"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Ba5-vz-NQ0" firstAttribute="leading" secondItem="a4u-Yd-oJm" secondAttribute="leading" constant="8" id="2wE-8z-Dg9"/>
+                                        <constraint firstAttribute="height" constant="32" id="D0S-vf-qE8"/>
+                                        <constraint firstItem="Ba5-vz-NQ0" firstAttribute="top" secondItem="a4u-Yd-oJm" secondAttribute="top" id="l2J-C9-Akw"/>
+                                        <constraint firstAttribute="trailing" secondItem="Ba5-vz-NQ0" secondAttribute="trailing" id="ox9-lj-9zN"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ba5-vz-NQ0" secondAttribute="bottom" id="uUA-Zc-Bu0"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ba5-vz-NQ0" secondAttribute="bottom" id="xCF-oL-o1g"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r47-t3-jni">
+                                    <rect key="frame" x="338" y="143.33333333333334" width="60" height="32"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="60" id="IhF-gc-UlZ"/>
+                                    </constraints>
+                                    <state key="normal" title="Add"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="didSelectAddButton:" destination="-1" eventType="touchUpInside" id="VVW-f0-PSF"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="aSU-qx-LRF" firstAttribute="top" secondItem="KlS-6n-i3h" secondAttribute="top" constant="70" id="3c6-yR-GUs"/>
+                                <constraint firstAttribute="trailing" secondItem="aSU-qx-LRF" secondAttribute="trailing" constant="16" id="89Q-Dc-q5P"/>
+                                <constraint firstAttribute="bottom" secondItem="a4u-Yd-oJm" secondAttribute="bottom" constant="16" id="8L8-3T-svk"/>
+                                <constraint firstItem="a4u-Yd-oJm" firstAttribute="leading" secondItem="KlS-6n-i3h" secondAttribute="leading" constant="16" id="EfN-Q1-626"/>
+                                <constraint firstItem="r47-t3-jni" firstAttribute="centerY" secondItem="a4u-Yd-oJm" secondAttribute="centerY" id="IGu-u6-Kct"/>
+                                <constraint firstItem="aSU-qx-LRF" firstAttribute="leading" secondItem="KlS-6n-i3h" secondAttribute="leading" constant="16" id="PJJ-Wv-gqk"/>
+                                <constraint firstItem="a4u-Yd-oJm" firstAttribute="top" secondItem="aSU-qx-LRF" secondAttribute="bottom" constant="16" id="RIT-7n-GHe"/>
+                                <constraint firstAttribute="trailing" secondItem="r47-t3-jni" secondAttribute="trailing" constant="16" id="V1L-dy-D5F"/>
+                                <constraint firstItem="r47-t3-jni" firstAttribute="leading" secondItem="a4u-Yd-oJm" secondAttribute="trailing" constant="8" id="iep-cO-suN"/>
+                                <constraint firstItem="r47-t3-jni" firstAttribute="height" secondItem="a4u-Yd-oJm" secondAttribute="height" id="tQt-Qc-oz6"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="KlS-6n-i3h" firstAttribute="top" secondItem="dDx-gp-MAG" secondAttribute="top" id="30C-zp-4Nl"/>
+                        <constraint firstAttribute="trailing" secondItem="KlS-6n-i3h" secondAttribute="trailing" id="gyU-bg-o7V"/>
+                        <constraint firstItem="KlS-6n-i3h" firstAttribute="centerX" secondItem="dDx-gp-MAG" secondAttribute="centerX" id="kI4-hc-TEa"/>
+                        <constraint firstAttribute="bottom" secondItem="KlS-6n-i3h" secondAttribute="bottom" id="xpg-qR-ZEC"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="dDx-gp-MAG" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="9N2-iU-SIl"/>
+                <constraint firstItem="dDx-gp-MAG" firstAttribute="top" secondItem="te4-rV-2gu" secondAttribute="top" id="9ao-Mw-kiH"/>
+                <constraint firstItem="KlS-6n-i3h" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="EUx-MM-Pqo"/>
+                <constraint firstItem="dDx-gp-MAG" firstAttribute="trailing" secondItem="te4-rV-2gu" secondAttribute="trailing" id="Mhp-70-sqV"/>
+                <constraint firstItem="dDx-gp-MAG" firstAttribute="leading" secondItem="te4-rV-2gu" secondAttribute="leading" id="UTc-8s-k9k"/>
+                <constraint firstItem="dDx-gp-MAG" firstAttribute="bottom" secondItem="te4-rV-2gu" secondAttribute="bottom" id="ljC-Gh-Q0T"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="te4-rV-2gu"/>
+            <point key="canvasLocation" x="134.78260869565219" y="-15.489130434782609"/>
         </view>
     </objects>
 </document>

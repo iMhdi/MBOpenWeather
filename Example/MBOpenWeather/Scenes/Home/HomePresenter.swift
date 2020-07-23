@@ -13,7 +13,6 @@ import MBOpenWeather
 protocol HomePresenterProtocol: class {
     var view:HomeViewProtocol? { get set }
     
-    func loadSavedLocations() -> [MBWeatherModel]?
     func requestLocationUpdates()
 }
 
@@ -32,11 +31,7 @@ class HomePresenter {
 }
 
 extension HomePresenter: HomePresenterProtocol {
-    
-    func loadSavedLocations() -> [MBWeatherModel]? {
-        return LocalStorageManager.loadWeatherInfo()
-    }
-    
+        
     func requestLocationUpdates() {
         LocationManager.shared.requestLocationUpdates()
     }

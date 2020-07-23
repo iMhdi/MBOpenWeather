@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A29335924CA244300415B2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A29335824CA244300415B2A /* Constants.swift */; };
 		2A6D241824C8D3C90078ED0F /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D241724C8D3C90078ED0F /* LocalStorageManager.swift */; };
 		2A6D242224C8DCF40078ED0F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6D242124C8DCF40078ED0F /* MapKit.framework */; };
 		2A6D242924C8ED510078ED0F /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D242724C8ED510078ED0F /* LocationCell.swift */; };
@@ -46,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		29EC6272812AEF92C17C7285 /* Pods-MBOpenWeather_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Example.debug.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2A29335824CA244300415B2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2A6D241724C8D3C90078ED0F /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
 		2A6D242124C8DCF40078ED0F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2A6D242724C8ED510078ED0F /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		2AD0167E24C8B5DC009EFEEB /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				2A29335824CA244300415B2A /* Constants.swift */,
 				2AD0168524C8B5DC009EFEEB /* AppNavigator */,
 				2AD016AC24C8BFF3009EFEEB /* LocationManager */,
 				2AD0168124C8B5DC009EFEEB /* ControllerFactory */,
@@ -515,6 +518,7 @@
 				2AD0168824C8B5DC009EFEEB /* ControllerManager.swift in Sources */,
 				2AD016A624C8B7BA009EFEEB /* NewCityFormViewController.swift in Sources */,
 				2AD016A724C8B7BA009EFEEB /* NewCityFormPresenter.swift in Sources */,
+				2A29335924CA244300415B2A /* Constants.swift in Sources */,
 				2A6D242924C8ED510078ED0F /* LocationCell.swift in Sources */,
 				2AD0168724C8B5DC009EFEEB /* UIViewController+Extension.swift in Sources */,
 				2AD0168A24C8B5DC009EFEEB /* AppNavigator.swift in Sources */,

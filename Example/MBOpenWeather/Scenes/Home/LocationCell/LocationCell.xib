@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCB-LA-2Bb">
                         <rect key="frame" x="8" y="8" width="304" height="206"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aqg-oz-LNc">
+                            <mapView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" showsBuildings="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aqg-oz-LNc">
                                 <rect key="frame" x="0.0" y="0.0" width="304" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="160" id="svP-NZ-HWq"/>

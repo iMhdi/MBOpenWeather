@@ -34,7 +34,7 @@ class LocationCell: UITableViewCell {
         }
         
         if let latitude = latitude, let longitude = longitude {
-            let location = CLLocation(latitude: CLLocationDegrees(latitude), longitude: CLLocationDegrees(longitude))
+            let location = CLLocation(latitude: latitude, longitude: longitude)
             let region = MKCoordinateRegionMakeWithDistance(location.coordinate, 50000, 60000)
             mapView.setRegion(region, animated: true)
         }

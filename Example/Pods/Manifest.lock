@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MBOpenWeather: 319accc95cb923444f1df3eefd3ae8bfd696ead2
+  MBOpenWeather: 3627db0aa03b1207b88e313de1a5a90018cbf13f
 
 PODFILE CHECKSUM: e2e48faabe75f6bfdf34dcc8ccc4b7e275fa3400
 

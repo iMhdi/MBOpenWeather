@@ -16,7 +16,9 @@ class ControllerFactory {
         case .home:
             return UIViewController.newInstance(of: HomeViewController())
         case .cityDetails:
-            return UIViewController.newInstance(of: CityDetailsViewController())
+            let detailsController = UIViewController.newInstance(of: CityDetailsViewController())
+            detailsController.currentLocation = (dataDictionary!["currentLocation"] as! MBWeatherModel)
+            return detailsController
         case .newCityForm:
             return UIViewController.newInstance(of: NewCityFormViewController())
         }

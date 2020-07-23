@@ -1,9 +1,9 @@
 {
   "name": "MBOpenWeather",
   "version": "0.1.0",
-  "summary": "A short description of MBOpenWeather.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/m.boukhris@gmail.com/MBOpenWeather",
+  "summary": "MBOpenWeather is a pod that uses OpenWeatherMap API to return weather information for a specific location.",
+  "description": "MBOpenWeather is a pod that uses OpenWeatherMap API to return weather information for a specific location.\nAvailable feature :\n* Weather info from CityName\n* Weather info from Coordinates",
+  "homepage": "https://github.com/iMhdi/MBOpenWeather",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,11 @@
     "m.boukhris@gmail.com": "m.boukhris@gmail.com"
   },
   "source": {
-    "git": "https://github.com/m.boukhris@gmail.com/MBOpenWeather.git",
+    "git": "https://github.com/iMhdi/MBOpenWeather.git",
     "tag": "0.1.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "11.0"
   },
   "source_files": "MBOpenWeather/Classes/**/*"
 }

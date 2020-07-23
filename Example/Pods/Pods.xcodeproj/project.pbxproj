@@ -49,8 +49,8 @@
 
 /* Begin PBXFileReference section */
 		0965E48B1B72D2F4815282E23FBB6EFA /* Pods-MBOpenWeather_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MBOpenWeather_Tests-umbrella.h"; sourceTree = "<group>"; };
-		0E2F89234B8D771221FFA787FC51B050 /* Pods_MBOpenWeather_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBOpenWeather_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		167EF5B6C4BF16ADB5DCC07CC8E1BBFF /* Pods_MBOpenWeather_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MBOpenWeather_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E2F89234B8D771221FFA787FC51B050 /* Pods_MBOpenWeather_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MBOpenWeather_Example.framework; path = "Pods-MBOpenWeather_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		167EF5B6C4BF16ADB5DCC07CC8E1BBFF /* Pods_MBOpenWeather_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_MBOpenWeather_Tests.framework; path = "Pods-MBOpenWeather_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		19DBCC449F4BD8D00D8D53F869869B2D /* Pods-MBOpenWeather_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MBOpenWeather_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2BE76440FBC9F084B7EA941EDF9DC782 /* MBOpenWeather.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = MBOpenWeather.modulemap; sourceTree = "<group>"; };
 		2D456AC6ADDED89966AF671C7238EDD0 /* Pods-MBOpenWeather_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MBOpenWeather_Tests.modulemap"; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 		3580CCE5133B4507C681D78CDBE35E93 /* Pods-MBOpenWeather_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MBOpenWeather_Example-Info.plist"; sourceTree = "<group>"; };
 		3B76FB737700F496B43813F9B7E8EE49 /* Pods-MBOpenWeather_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MBOpenWeather_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		466278F28205C8F62E9926A4A89BBFFD /* CharacterSet+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "CharacterSet+Extension.swift"; sourceTree = "<group>"; };
-		48CF2BE8940A60FFCCD14968A0187D8A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		48CF2BE8940A60FFCCD14968A0187D8A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		6076C9512137F931DA81434E6C9B90C5 /* MBRequestWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MBRequestWrapper.swift; sourceTree = "<group>"; };
 		722B77484272BA712F0F171B3E34CF18 /* Pods-MBOpenWeather_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-MBOpenWeather_Example.modulemap"; sourceTree = "<group>"; };
 		72E0F0B0568CA00193232F1EFA6AB950 /* Pods-MBOpenWeather_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MBOpenWeather_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -66,14 +66,14 @@
 		825D8421B661AC2083D96D4CFF897D30 /* MBWeatherModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MBWeatherModel.swift; sourceTree = "<group>"; };
 		91E1A16FF74E248BBC6F521834A3CF3F /* Pods-MBOpenWeather_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MBOpenWeather_Tests-Info.plist"; sourceTree = "<group>"; };
 		937DBD9154FFDBCD417DF07303D10313 /* MBOpenWeather.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBOpenWeather.xcconfig; sourceTree = "<group>"; };
-		93DA62ECDAE8C735F4B1191C1075280B /* MBOpenWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MBOpenWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93DA62ECDAE8C735F4B1191C1075280B /* MBOpenWeather.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MBOpenWeather.framework; path = MBOpenWeather.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		962A0472EC34E0D2F5584D6306521B5A /* Pods-MBOpenWeather_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MBOpenWeather_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9889E1158D9104DFFDEE87CCB40ACF37 /* Pods-MBOpenWeather_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-MBOpenWeather_Example-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DF4DA63E544CC4D0A3822D1BC53BA5E /* MBOpenWeather-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBOpenWeather-prefix.pch"; sourceTree = "<group>"; };
 		9EBE42E2348C22B1D51526647708BD30 /* Pods-MBOpenWeather_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MBOpenWeather_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A6579B598671FADF8B85C6AC34E58527 /* MBOpenWeather-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBOpenWeather-umbrella.h"; sourceTree = "<group>"; };
-		A962297893FDC925B2EE223C26AAC0A2 /* MBOpenWeather.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = MBOpenWeather.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A962297893FDC925B2EE223C26AAC0A2 /* MBOpenWeather.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = MBOpenWeather.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		ACA3B6523ABD468969BF5E52CB020474 /* MBOpenWeather-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBOpenWeather-dummy.m"; sourceTree = "<group>"; };
 		AD0AC93C7DA396EB403D4ECB28441D5C /* Pods-MBOpenWeather_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MBOpenWeather_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		AE60032ECEE1A98E64399C1A70491AA5 /* MBOpenWeather-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "MBOpenWeather-Info.plist"; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		C6D26B18A8DF80915D9AC75671C78601 /* Pods-MBOpenWeather_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MBOpenWeather_Example-dummy.m"; sourceTree = "<group>"; };
 		D8C0C1C1023435E0BCEFD44CBE940B22 /* Pods-MBOpenWeather_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MBOpenWeather_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA3D355BD468FF9194F64E7AABA95014 /* Pods-MBOpenWeather_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MBOpenWeather_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		E924B24B1D394EB8FDB0CCDC30E2246A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E924B24B1D394EB8FDB0CCDC30E2246A /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		EB58CEB8BD81E31B0520E12C709B17BA /* Pods-MBOpenWeather_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MBOpenWeather_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,9 +118,9 @@
 		140C9A5FE39D96F5EB8A19B8EA0A9A60 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				6076C9512137F931DA81434E6C9B90C5 /* MBRequestWrapper.swift */,
 				466278F28205C8F62E9926A4A89BBFFD /* CharacterSet+Extension.swift */,
 				824EBBBDE9BC410BD74292414E04DAD8 /* Dictionary+Extension.swift */,
+				6076C9512137F931DA81434E6C9B90C5 /* MBRequestWrapper.swift */,
 			);
 			name = Utilities;
 			path = MBOpenWeather/Classes/Utilities;
@@ -166,10 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				B43BE413519E1585151290ECD8F791DF /* MBWeatherManager.swift */,
-				140C9A5FE39D96F5EB8A19B8EA0A9A60 /* Utilities */,
 				40BF39689D99A10787D5CC2A55EED30C /* Models */,
 				B4A7749A8F96FB4D814EBC9F0CDCD584 /* Pod */,
 				F94CB12266579241271627A0FBFF9DE7 /* Support Files */,
+				140C9A5FE39D96F5EB8A19B8EA0A9A60 /* Utilities */,
 			);
 			name = MBOpenWeather;
 			path = ../..;
@@ -454,106 +454,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		2F11C62FA6AD1C033875C12E089EAF55 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B56DD3790A856CD79F9BD95D66E7177D /* Pods-MBOpenWeather_Example.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		6FE1C22E97A47B0102C345E9FF0568F4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 937DBD9154FFDBCD417DF07303D10313 /* MBOpenWeather.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MBOpenWeather/MBOpenWeather-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MBOpenWeather/MBOpenWeather-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MBOpenWeather/MBOpenWeather.modulemap";
-				PRODUCT_MODULE_NAME = MBOpenWeather;
-				PRODUCT_NAME = MBOpenWeather;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		89E71114EC946BFC5AF4BA883CFD889F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 937DBD9154FFDBCD417DF07303D10313 /* MBOpenWeather.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/MBOpenWeather/MBOpenWeather-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/MBOpenWeather/MBOpenWeather-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/MBOpenWeather/MBOpenWeather.modulemap";
-				PRODUCT_MODULE_NAME = MBOpenWeather;
-				PRODUCT_NAME = MBOpenWeather;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTS_MACCATALYST = NO;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B0087CB4594321EF41619F3181FE120E /* Release */ = {
+		00EC5F60B08274CA8F47AEDA1D342E99 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -601,22 +502,25 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Release;
 		};
-		B5771B0B3726A5D4FC6C203C4899B0C1 /* Debug */ = {
+		3794023CB98B84271BD11046E716AFC4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 962A0472EC34E0D2F5584D6306521B5A /* Pods-MBOpenWeather_Example.debug.xcconfig */;
+			baseConfigurationReference = 72E0F0B0568CA00193232F1EFA6AB950 /* Pods-MBOpenWeather_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -626,12 +530,81 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4B009CC2C4105BCE83AE01EF94CFA9E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 937DBD9154FFDBCD417DF07303D10313 /* MBOpenWeather.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBOpenWeather/MBOpenWeather-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBOpenWeather/MBOpenWeather-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBOpenWeather/MBOpenWeather.modulemap";
+				PRODUCT_MODULE_NAME = MBOpenWeather;
+				PRODUCT_NAME = MBOpenWeather;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		6196DB124CB5B05F54260D1224C5F7B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8C0C1C1023435E0BCEFD44CBE940B22 /* Pods-MBOpenWeather_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -645,7 +618,43 @@
 			};
 			name = Debug;
 		};
-		B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */ = {
+		AE223236BAD5B31867D5BD146BF02184 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B56DD3790A856CD79F9BD95D66E7177D /* Pods-MBOpenWeather_Example.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E30E3BB34B705C10375873656026457D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -696,7 +705,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -709,11 +718,13 @@
 			};
 			name = Debug;
 		};
-		CD1E414DF08B43CEF731A41A5102A032 /* Release */ = {
+		E5215AEC19F559435A0031A567B8163D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72E0F0B0568CA00193232F1EFA6AB950 /* Pods-MBOpenWeather_Tests.release.xcconfig */;
+			baseConfigurationReference = 962A0472EC34E0D2F5584D6306521B5A /* Pods-MBOpenWeather_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -723,46 +734,12 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E0799E882F4B1D548616983613860EEA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8C0C1C1023435E0BCEFD44CBE940B22 /* Pods-MBOpenWeather_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -776,14 +753,48 @@
 			};
 			name = Debug;
 		};
+		FA981058E857EBA75BD3AAA801026CB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 937DBD9154FFDBCD417DF07303D10313 /* MBOpenWeather.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/MBOpenWeather/MBOpenWeather-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/MBOpenWeather/MBOpenWeather-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/MBOpenWeather/MBOpenWeather.modulemap";
+				PRODUCT_MODULE_NAME = MBOpenWeather;
+				PRODUCT_NAME = MBOpenWeather;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		07395B5438D1E30ADEF883F5849C5498 /* Build configuration list for PBXNativeTarget "Pods-MBOpenWeather_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B5771B0B3726A5D4FC6C203C4899B0C1 /* Debug */,
-				2F11C62FA6AD1C033875C12E089EAF55 /* Release */,
+				E5215AEC19F559435A0031A567B8163D /* Debug */,
+				AE223236BAD5B31867D5BD146BF02184 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -791,8 +802,8 @@
 		26A5749242A9FED8B02F436665F2C654 /* Build configuration list for PBXNativeTarget "MBOpenWeather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6FE1C22E97A47B0102C345E9FF0568F4 /* Debug */,
-				89E71114EC946BFC5AF4BA883CFD889F /* Release */,
+				4B009CC2C4105BCE83AE01EF94CFA9E3 /* Debug */,
+				FA981058E857EBA75BD3AAA801026CB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -800,8 +811,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B8BCBD0110C2658BB5DAADB9B7D97B92 /* Debug */,
-				B0087CB4594321EF41619F3181FE120E /* Release */,
+				E30E3BB34B705C10375873656026457D /* Debug */,
+				00EC5F60B08274CA8F47AEDA1D342E99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -809,8 +820,8 @@
 		E4FC18D6720BE61E4E5E4726ECE6E56E /* Build configuration list for PBXNativeTarget "Pods-MBOpenWeather_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E0799E882F4B1D548616983613860EEA /* Debug */,
-				CD1E414DF08B43CEF731A41A5102A032 /* Release */,
+				6196DB124CB5B05F54260D1224C5F7B9 /* Debug */,
+				3794023CB98B84271BD11046E716AFC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

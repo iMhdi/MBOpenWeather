@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A29335924CA244300415B2A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A29335824CA244300415B2A /* Constants.swift */; };
+		2A29335C24CA27E100415B2A /* DetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A29335A24CA27E100415B2A /* DetailsCell.swift */; };
+		2A29335D24CA27E100415B2A /* DetailsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A29335B24CA27E100415B2A /* DetailsCell.xib */; };
 		2A6D241824C8D3C90078ED0F /* LocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D241724C8D3C90078ED0F /* LocalStorageManager.swift */; };
 		2A6D242224C8DCF40078ED0F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A6D242124C8DCF40078ED0F /* MapKit.framework */; };
 		2A6D242924C8ED510078ED0F /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6D242724C8ED510078ED0F /* LocationCell.swift */; };
@@ -48,6 +50,8 @@
 /* Begin PBXFileReference section */
 		29EC6272812AEF92C17C7285 /* Pods-MBOpenWeather_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Example.debug.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		2A29335824CA244300415B2A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2A29335A24CA27E100415B2A /* DetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCell.swift; sourceTree = "<group>"; };
+		2A29335B24CA27E100415B2A /* DetailsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsCell.xib; sourceTree = "<group>"; };
 		2A6D241724C8D3C90078ED0F /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
 		2A6D242124C8DCF40078ED0F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		2A6D242724C8ED510078ED0F /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
@@ -69,7 +73,7 @@
 		2AD016AA24C8BFEE009EFEEB /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		378376A55FE6F4D4FAD634B8 /* Pods-MBOpenWeather_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Tests.debug.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Tests/Pods-MBOpenWeather_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3EFF83518F8807E45903DD8B /* Pods-MBOpenWeather_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MBOpenWeather_Example.release.xcconfig"; path = "Target Support Files/Pods-MBOpenWeather_Example/Pods-MBOpenWeather_Example.release.xcconfig"; sourceTree = "<group>"; };
-		607FACD01AFB9204008FA782 /* MBOpenWeather_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBOpenWeather_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACD01AFB9204008FA782 /* MBOpenWeather_Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MBOpenWeather_Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -107,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A29335E24CA27E500415B2A /* DetailsCell */ = {
+			isa = PBXGroup;
+			children = (
+				2A29335A24CA27E100415B2A /* DetailsCell.swift */,
+				2A29335B24CA27E100415B2A /* DetailsCell.xib */,
+			);
+			path = DetailsCell;
+			sourceTree = "<group>";
+		};
 		2A6D241924C8D3D10078ED0F /* LocalStorageManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +219,7 @@
 				2AD0169D24C8B7BA009EFEEB /* CityDetailsViewController.swift */,
 				2AD0169C24C8B7BA009EFEEB /* CityDetailsPresenter.swift */,
 				2AD0169B24C8B7BA009EFEEB /* CityDetailsViewController.xib */,
+				2A29335E24CA27E500415B2A /* DetailsCell */,
 			);
 			path = CityDetails;
 			sourceTree = "<group>";
@@ -243,7 +257,7 @@
 		607FACD11AFB9204008FA782 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				607FACD01AFB9204008FA782 /* MBOpenWeather_Example.app */,
+				607FACD01AFB9204008FA782 /* MBOpenWeather_Demo.app */,
 				607FACE51AFB9204008FA782 /* MBOpenWeather_Tests.xctest */,
 			);
 			name = Products;
@@ -322,9 +336,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		607FACCF1AFB9204008FA782 /* MBOpenWeather_Example */ = {
+		607FACCF1AFB9204008FA782 /* MBOpenWeather_Demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "MBOpenWeather_Example" */;
+			buildConfigurationList = 607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "MBOpenWeather_Demo" */;
 			buildPhases = (
 				53BEE85BC41F5AB3BC4CC8ED /* [CP] Check Pods Manifest.lock */,
 				607FACCC1AFB9204008FA782 /* Sources */,
@@ -336,9 +350,9 @@
 			);
 			dependencies = (
 			);
-			name = MBOpenWeather_Example;
+			name = MBOpenWeather_Demo;
 			productName = MBOpenWeather;
-			productReference = 607FACD01AFB9204008FA782 /* MBOpenWeather_Example.app */;
+			productReference = 607FACD01AFB9204008FA782 /* MBOpenWeather_Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 		607FACE41AFB9204008FA782 /* MBOpenWeather_Tests */ = {
@@ -396,7 +410,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				607FACCF1AFB9204008FA782 /* MBOpenWeather_Example */,
+				607FACCF1AFB9204008FA782 /* MBOpenWeather_Demo */,
 				607FACE41AFB9204008FA782 /* MBOpenWeather_Tests */,
 			);
 		};
@@ -412,6 +426,7 @@
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 				2AD0167924C8B53D009EFEEB /* HomeViewController.xib in Resources */,
+				2A29335D24CA27E100415B2A /* DetailsCell.xib in Resources */,
 				2AD016A524C8B7BA009EFEEB /* NewCityFormViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -515,6 +530,7 @@
 			files = (
 				2AD016A424C8B7BA009EFEEB /* CityDetailsViewController.swift in Sources */,
 				2A6D241824C8D3C90078ED0F /* LocalStorageManager.swift in Sources */,
+				2A29335C24CA27E100415B2A /* DetailsCell.swift in Sources */,
 				2AD0168824C8B5DC009EFEEB /* ControllerManager.swift in Sources */,
 				2AD016A624C8B7BA009EFEEB /* NewCityFormViewController.swift in Sources */,
 				2AD016A724C8B7BA009EFEEB /* NewCityFormPresenter.swift in Sources */,
@@ -544,7 +560,7 @@
 /* Begin PBXTargetDependency section */
 		607FACE71AFB9204008FA782 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 607FACCF1AFB9204008FA782 /* MBOpenWeather_Example */;
+			target = 607FACCF1AFB9204008FA782 /* MBOpenWeather_Demo */;
 			targetProxy = 607FACE61AFB9204008FA782 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -669,7 +685,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MBOpenWeather_Demo;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -684,7 +700,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MBOpenWeather_Demo;
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -708,7 +724,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MBOpenWeather_Example.app/MBOpenWeather_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MBOpenWeather_Demo.app/MBOpenWeather_Demo";
 			};
 			name = Debug;
 		};
@@ -726,7 +742,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MBOpenWeather_Example.app/MBOpenWeather_Example";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MBOpenWeather_Demo.app/MBOpenWeather_Demo";
 			};
 			name = Release;
 		};
@@ -742,7 +758,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "MBOpenWeather_Example" */ = {
+		607FACEF1AFB9204008FA782 /* Build configuration list for PBXNativeTarget "MBOpenWeather_Demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				607FACF01AFB9204008FA782 /* Debug */,

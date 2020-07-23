@@ -72,7 +72,7 @@ public class MBWeatherModel: NSObject, NSCoding, Codable {
         aCoder.encode(id, forKey: "id")
         aCoder.encode(name, forKey: "name")
         aCoder.encode(cod, forKey: "cod")
-    }
+    }    
 }
 
 // MARK: - Clouds

@@ -121,7 +121,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navController.navigate(to: .cityDetails, withStyle: .present)
+        let selectedItem = LocalStorageManager.shared.savedLocations[indexPath.row]
+        navController.navigate(to: .cityDetails, withStyle: .present, andData: ["currentLocation": selectedItem])
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {

@@ -27,7 +27,7 @@ class Tests: XCTestCase {
 
         var weatherInformation: MBWeatherModel? = nil
         let expectation = self.expectation(description: "API Call")
-        MBWeatherManager.shared.setAPIKey("439d4b804bc8187953eb36d2a8c26a02")
+        MBWeatherManager.shared.setAPIKey("e6f01a504b6a46e79560c140323f2113")
         MBWeatherManager.shared.weatherInfo(forCityName: "Paris", withSuccess: { weatherData in
             print("success")
             weatherInformation = weatherData
@@ -51,7 +51,7 @@ class Tests: XCTestCase {
         
         var weatherInformation: MBWeatherModel? = nil
         let expectation = self.expectation(description: "API Call")
-        MBWeatherManager.shared.setAPIKey("439d4b804bc8187953eb36d2a8c26a02")
+        MBWeatherManager.shared.setAPIKey("e6f01a504b6a46e79560c140323f2113")
         MBWeatherManager.shared.weatherInfo(forLatitude: 48.8530143, longitude: 2.3465163, withSuccess: { weatherData in
             print("success")
             weatherInformation = weatherData

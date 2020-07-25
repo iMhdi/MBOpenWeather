@@ -8,17 +8,16 @@
 
 import Foundation
 
-//fileprivate let BASE_URL = "http://api.openweathermap.org/data/2.5/"
-fileprivate let BASE_URL = "https://samples.openweathermap.org/data/2.5/"
+fileprivate let BASE_URL = "http://api.openweathermap.org/data/2.5/"
 
 fileprivate let ENDPOINT_WEATHER = BASE_URL + "weather"
 
-public class MBWeatherManager {
+@objc public class MBWeatherManager: NSObject {
     
 
     // MARK: - Properties
 
-    public static let shared = MBWeatherManager()
+    @objc public static let shared = MBWeatherManager()
 
     // MARK: -
 
@@ -26,13 +25,26 @@ public class MBWeatherManager {
 
     // MARK: - Initialization
 
-    private init() { }
+    @objc private override init() { }
 
-    public func setAPIKey(_ apiKey: String?) {
+    @objc public func setAPIKey(_ apiKey: String?) {
         self.apiKey = apiKey
     }
     
-    public func weatherInfo(forCityName cityName:String, withSuccess success:@escaping (MBWeatherModel) -> Void, andFailure failure:@escaping (NSError) -> Void) {
+    @objc public func weatherInfo(forCityId cityId:NSNumber?, withSuccess success:@escaping (MBWeatherModel) -> Void, andFailure failure:@escaping (NSError) -> Void) {
+        
+        guard let apiKey = apiKey else {
+            return failure(NSError(domain:"MISSING_API_KEY", code:-3, userInfo:nil))
+        }
+        
+        guard let cityId = cityId else {
+            return failure(NSError(domain:"MISSING_CITY_IDENTIFIER", code:-4, userInfo:nil))
+        }
+        
+        MBRequestWrapper.requestAPI(withURL: ENDPOINT_WEATHER, method: "GET", andParameters: ["appid": apiKey, "id": "\(cityId)"], success: success, failure: failure)
+    }
+    
+    @objc public func weatherInfo(forCityName cityName:String, withSuccess success:@escaping (MBWeatherModel) -> Void, andFailure failure:@escaping (NSError) -> Void) {
         
         guard let apiKey = apiKey else {
             return failure(NSError(domain:"MISSING_API_KEY", code:-3, userInfo:nil))
@@ -41,7 +53,7 @@ public class MBWeatherManager {
         MBRequestWrapper.requestAPI(withURL: ENDPOINT_WEATHER, method: "GET", andParameters: ["appid": apiKey, "q": cityName], success: success, failure: failure)
     }
     
-    public func weatherInfo(forLatitude latitude:Double, longitude: Double, withSuccess success:@escaping (MBWeatherModel) -> Void, andFailure failure:@escaping (NSError) -> Void) {
+    @objc public func weatherInfo(forLatitude latitude:Double, longitude: Double, withSuccess success:@escaping (MBWeatherModel) -> Void, andFailure failure:@escaping (NSError) -> Void) {
         
         guard let apiKey = apiKey else {
             return failure(NSError(domain:"MISSING_API_KEY", code:-3, userInfo:nil))

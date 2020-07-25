@@ -91,7 +91,7 @@ extension CityDetailsPresenter: CityDetailsPresenterProtocol {
         view?.startLoading()
         // For visual effect only (to see rotation animation)
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            MBWeatherManager.shared.weatherInfo(forCityId: weatherInfo.id, withSuccess: { weatherInfo in
+            MBWeatherManager.shared.weatherInfo(forCityId: weatherInfo.id as NSNumber?, withSuccess: { weatherInfo in
                 self.view?.stopLoading()
                 self.view?.didReceiveWeatherInfo(weatherInfo)
             }) { error in

@@ -56,7 +56,7 @@ extension MBRequestWrapper {
             guard let httpResponse = response as? HTTPURLResponse, let receivedData = data else {
                 print("ERROR: not a valid http response")
                 DispatchQueue.main.async {
-                    failure(NSError(domain:"INVALID_RESPONSE", code:-3, userInfo:nil))
+                    failure(NSError(domain:"INVALID_RESPONSE", code:-5, userInfo:nil))
                 }
                 return
             }
@@ -79,7 +79,7 @@ extension MBRequestWrapper {
             default:
                 print("GET request got response code \(httpResponse.statusCode)")
                 DispatchQueue.main.async {
-                    failure(NSError(domain:"INVALID_RESPONSE_CODE", code:-4, userInfo:nil))
+                    failure(NSError(domain:"INVALID_RESPONSE_CODE", code:-6, userInfo:nil))
                 }
                 return
             }
@@ -104,7 +104,7 @@ extension MBRequestWrapper {
             guard let httpResponse = response as? HTTPURLResponse, let receivedData = data else {
                 print("ERROR: not a valid http response")
                 DispatchQueue.main.async {
-                    return failure(NSError(domain:"INVALID_RESPONSE", code:-3, userInfo:nil))
+                    return failure(NSError(domain:"INVALID_RESPONSE", code:-5, userInfo:nil))
                 }
                 return
             }
@@ -127,7 +127,7 @@ extension MBRequestWrapper {
             default:
                 print("POST request got response code \(httpResponse.statusCode)")
                 DispatchQueue.main.async {
-                    return failure(NSError(domain:"INVALID_RESPONSE_CODE", code:-4, userInfo:nil))
+                    return failure(NSError(domain:"INVALID_RESPONSE_CODE", code:-6, userInfo:nil))
                 }
                 return
             }

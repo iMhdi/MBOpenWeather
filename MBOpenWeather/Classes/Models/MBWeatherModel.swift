@@ -8,19 +8,19 @@
 
 import Foundation
 
-public enum TemperatureUnit {
+@objc public enum TemperatureUnit: Int {
     case kelvin
     case celsius
     case fahrenheit
 }
 
-public enum WindSpeedUnit {
+@objc public enum WindSpeedUnit: Int {
     case kmPerHour
     case milesPerHour
 }
 
 // MARK: - MBWeatherModel
-public class MBWeatherModel: NSObject, NSCoding, Codable {
+@objc public class MBWeatherModel: NSObject, NSCoding, Codable {
     
     public let coord: Coord?
     public let weather: [Weather]?
@@ -86,28 +86,28 @@ public class MBWeatherModel: NSObject, NSCoding, Codable {
     }
     
     // MARK: - easy access properties
-    public var weatherDescription: String? {
+    @objc public var weatherDescription: String? {
         if let weatherDescription = self.weather?.first?.weatherDescription {
             return weatherDescription
         }
         return nil
     }
     
-    public var humidity: String? {
+    @objc public var humidity: String? {
         if let humidity = self.main?.humidity {
             return "\(humidity)%"
         }
         return nil
     }
 
-    public var pressure: String? {
+    @objc public var pressure: String? {
         if let pressure = self.main?.pressure {
             return "\(Int(pressure))hPa"
         }
         return nil
     }
 
-    public var windDirection: String? {
+    @objc public var windDirection: String? {
         if let directionInDegrees = self.wind?.deg {
             var returnValue = "N/A"
             if ((directionInDegrees >= 339) || (directionInDegrees <= 22)) {
@@ -133,14 +133,14 @@ public class MBWeatherModel: NSObject, NSCoding, Codable {
         return nil
     }
 
-    public var cloudCoverage: String? {
+    @objc public var cloudCoverage: String? {
         if let cloudCoverage = self.clouds?.all {
             return "\(cloudCoverage)%";
         }
         return nil
     }
     
-    public var sunriseTime: String? {
+    @objc public var sunriseTime: String? {
         if let sunrise = self.sys?.sunrise, let timezone = self.timezone {
             let sunriseUTCTimeStamp = Date(timeIntervalSince1970: TimeInterval(sunrise))
             
@@ -153,7 +153,7 @@ public class MBWeatherModel: NSObject, NSCoding, Codable {
         return nil
     }
     
-    public var sunsetTime: String? {
+    @objc public var sunsetTime: String? {
         if let sunset = self.sys?.sunset, let timezone = self.timezone {
             let sunsetUTCTimeStamp = Date(timeIntervalSince1970: TimeInterval(sunset))
             
@@ -166,7 +166,7 @@ public class MBWeatherModel: NSObject, NSCoding, Codable {
         return nil
     }
     
-    public var daylightHours: String? {
+    @objc public var daylightHours: String? {
         if let sunriseTime = self.sunriseTime, let sunsetTime = self.sunsetTime {
             let formatter = DateFormatter()
             formatter.dateFormat = "HH:mm"
@@ -189,7 +189,7 @@ public class MBWeatherModel: NSObject, NSCoding, Codable {
     }
 
     // MARK: - easy access functions
-    public func getTemperature(in unit: TemperatureUnit = .kelvin) -> String? {
+    @objc public func getTemperature(in unit: TemperatureUnit = .kelvin) -> String? {
         if let temperatureK = self.main?.temp {
             switch unit {
             case .kelvin:
@@ -205,7 +205,7 @@ public class MBWeatherModel: NSObject, NSCoding, Codable {
         return nil
     }
     
-    public func getWindSpeed(in unit: WindSpeedUnit = .kmPerHour) -> String? {
+    @objc public func getWindSpeed(in unit: WindSpeedUnit = .kmPerHour) -> String? {
         if let windSpeedInMS = self.wind?.speed {
             switch unit {
             case .kmPerHour:

@@ -8,6 +8,17 @@
 
 import Foundation
 
+public enum TemperatureUnit {
+    case kelvin
+    case celsius
+    case fahrenheit
+}
+
+public enum WindSpeedUnit {
+    case kmPerHour
+    case milesPerHour
+}
+
 // MARK: - MBWeatherModel
 public class MBWeatherModel: NSObject, NSCoding, Codable {
     
@@ -72,7 +83,145 @@ public class MBWeatherModel: NSObject, NSCoding, Codable {
         aCoder.encode(id, forKey: "id")
         aCoder.encode(name, forKey: "name")
         aCoder.encode(cod, forKey: "cod")
-    }    
+    }
+    
+    // MARK: - easy access properties
+    public var weatherDescription: String? {
+        if let weatherDescription = self.weather?.first?.weatherDescription {
+            return weatherDescription
+        }
+        return nil
+    }
+    
+    public var humidity: String? {
+        if let humidity = self.main?.humidity {
+            return "\(humidity)%"
+        }
+        return nil
+    }
+
+    public var pressure: String? {
+        if let pressure = self.main?.pressure {
+            return "\(Int(pressure))hPa"
+        }
+        return nil
+    }
+
+    public var windDirection: String? {
+        if let directionInDegrees = self.wind?.deg {
+            var returnValue = "N/A"
+            if ((directionInDegrees >= 339) || (directionInDegrees <= 22)) {
+                returnValue = "N";
+            } else if ((directionInDegrees > 23) && (directionInDegrees <= 68)) {
+                returnValue = "NE";
+            } else if ((directionInDegrees > 69) && (directionInDegrees <= 113)) {
+                returnValue = "E";
+            } else if ((directionInDegrees > 114) && (directionInDegrees <= 158)) {
+                returnValue = "SE";
+            } else if ((directionInDegrees > 159) && (directionInDegrees <= 203)) {
+                returnValue = "S";
+            } else if ((directionInDegrees > 204) && (directionInDegrees <= 248)) {
+                returnValue = "SW";
+            } else if ((directionInDegrees > 249) && (directionInDegrees <= 293)) {
+                returnValue = "W";
+            } else if ((directionInDegrees > 294) && (directionInDegrees <= 338)) {
+                returnValue = "NW";
+            }
+
+            return returnValue;
+        }
+        return nil
+    }
+
+    public var cloudCoverage: String? {
+        if let cloudCoverage = self.clouds?.all {
+            return "\(cloudCoverage)%";
+        }
+        return nil
+    }
+    
+    public var sunriseTime: String? {
+        if let sunrise = self.sys?.sunrise, let timezone = self.timezone {
+            let sunriseUTCTimeStamp = Date(timeIntervalSince1970: TimeInterval(sunrise))
+            
+            let localFormatter = DateFormatter()
+            localFormatter.timeZone = TimeZone(secondsFromGMT: timezone)
+            localFormatter.dateFormat = "HH:mm"
+            
+            return localFormatter.string(from: sunriseUTCTimeStamp)
+        }
+        return nil
+    }
+    
+    public var sunsetTime: String? {
+        if let sunset = self.sys?.sunset, let timezone = self.timezone {
+            let sunsetUTCTimeStamp = Date(timeIntervalSince1970: TimeInterval(sunset))
+            
+            let localFormatter = DateFormatter()
+            localFormatter.timeZone = TimeZone(secondsFromGMT: timezone)
+            localFormatter.dateFormat = "HH:mm"
+            
+            return localFormatter.string(from: sunsetUTCTimeStamp)
+        }
+        return nil
+    }
+    
+    public var daylightHours: String? {
+        if let sunriseTime = self.sunriseTime, let sunsetTime = self.sunsetTime {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "HH:mm"
+
+            if let sunrise = formatter.date(from: sunriseTime), let sunset = formatter.date(from: sunsetTime) {
+                let interval    = sunset.timeIntervalSince(sunrise)
+                let hours       = interval / 3600
+                let minutes     = (interval - (hours * 3600)) / 60
+                
+                if minutes == 0 {
+                    return "\(Int(hours))"
+                } else if minutes < 10 {
+                    return "\(Int(hours)):0\(Int(minutes))"
+                } else {
+                    return "\(Int(hours)):\(Int(minutes))"
+                }
+            }
+        }
+        return nil
+    }
+
+    // MARK: - easy access functions
+    public func getTemperature(in unit: TemperatureUnit = .kelvin) -> String? {
+        if let temperatureK = self.main?.temp {
+            switch unit {
+            case .kelvin:
+                return "\(temperatureK)°K"
+            case .celsius:
+                let temperatureC = Int(temperatureK - 273.15)
+                return "\(temperatureC)°C"
+            case .fahrenheit:
+                let temperatureF = Int((temperatureK - 273.15) * 1.8000 + 32.00)
+                return "\(temperatureF)°F"
+            }
+        }
+        return nil
+    }
+    
+    public func getWindSpeed(in unit: WindSpeedUnit = .kmPerHour) -> String? {
+        if let windSpeedInMS = self.wind?.speed {
+            switch unit {
+            case .kmPerHour:
+                let windSpeedInKh: Int = Int(windSpeedInMS * 3.6)
+                return "\(windSpeedInKh)Km/h"
+            case .milesPerHour:
+                let windSpeedInMH: Int = Int(windSpeedInMS * 2.2369)
+                return "(\(windSpeedInMH)M/h)"
+            }
+        }
+        return nil
+    }
+    
+    static func ==(lhs: MBWeatherModel, rhs: MBWeatherModel) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
 
 // MARK: - Clouds

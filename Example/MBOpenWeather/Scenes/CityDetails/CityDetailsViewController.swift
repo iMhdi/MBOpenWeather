@@ -1,6 +1,6 @@
 //
 //  CityDetailsViewController.swift
-//  MBOpenWeather_Example
+//  MBOpenWeather_Demo
 //
 //  Created by El Mahdi Boukhris on 22/07/2020.
 //  Copyright © 2020 El Mahdi Boukhris. All rights reserved.
@@ -13,6 +13,13 @@ import MBOpenWeather
 protocol CityDetailsViewProtocol: class {
     func startLoading()
     func stopLoading()
+    
+    func didReceiveWeatherInfo(_ weatherInfo: MBWeatherModel)
+}
+
+struct TableViewDataSource {
+    var key: String
+    var value: String
 }
 
 class CityDetailsViewController: UIViewController {
@@ -23,26 +30,24 @@ class CityDetailsViewController: UIViewController {
     @IBOutlet weak var weatherIcon: UIImageView!
     @IBOutlet weak var detailsTableView: UITableView!
     
+    @IBOutlet weak var refreshButton: UIButton!
+    
     // MARK: - Public properties
     lazy var presenter:CityDetailsPresenterProtocol = CityDetailsPresenter(view: self)
       
     // MARK: - Private properties
     var currentLocation: MBWeatherModel?
-    var detailsDictionnary = [String: String]()
+    var detailsArray = [WeatherSingleInfoLine]()
 
     // MARK: - View lifecycle
   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        initMapViewSection()
-        
-        if let currentLocation = currentLocation {
-            detailsDictionnary = presenter.constructDataSource(from: currentLocation)
-        }
-
         detailsTableView.register(UINib(nibName: "DetailsCell", bundle: nil), forCellReuseIdentifier: "DetailsCell")
-        detailsTableView.reloadData()
+        
+        initNavigationBar()
+        populateView()
     }
   
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +55,14 @@ class CityDetailsViewController: UIViewController {
     }
   
     // MARK: - Display logic
+    
+    func initNavigationBar() {
+        self.title = "City information"
+        
+        let backButton = UIBarButtonItem(title: "Close", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.didCloseButton(sender:)))
+
+        self.navigationItem.leftBarButtonItem = backButton
+    }
     
     func initMapViewSection() {
         if let cityName = currentLocation?.name, let country = currentLocation?.sys?.country {
@@ -64,13 +77,36 @@ class CityDetailsViewController: UIViewController {
         
         if let latitude = currentLocation?.coord?.lat, let longitude = currentLocation?.coord?.lon {
             let location = CLLocationCoordinate2DMake(latitude, longitude)
-            let region = MKCoordinateRegionMakeWithDistance(location, 3000, 3000)
-            mapView.setRegion(region, animated: true)
+            
+            let marker = MKPointAnnotation()
+            marker.coordinate = location
+            marker.title = locationNameLabel.text
+
+            mapView.addAnnotation(marker)
+            mapView.setCenter(location, animated: true)
         }
+    }
+    
+    func populateView() {
+        initMapViewSection()
+        
+        if let currentLocation = currentLocation {
+            detailsArray = presenter.constructDataSource(from: currentLocation)
+        }
+
+        detailsTableView.reloadData()
     }
 
     // MARK: - Actions
-        
+    
+    @IBAction func didSelectRefreshButton(_ sender: Any) {
+        presenter.refreshWeatherInfo(weatherInfo: currentLocation!)
+    }
+    
+    @objc func didCloseButton(sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
+    }
+    
     // MARK: - Overrides
     
     // MARK: - Private functions
@@ -79,17 +115,32 @@ class CityDetailsViewController: UIViewController {
 extension CityDetailsViewController:  CityDetailsViewProtocol {
     
     func startLoading() {
-        showLoading()
+        let rotateAnimation = CABasicAnimation(keyPath: "transform.rotation")
+        rotateAnimation.fromValue = 0.0
+        rotateAnimation.toValue = CGFloat(Double.pi * 2)
+        rotateAnimation.isRemovedOnCompletion = false
+        rotateAnimation.duration = 1
+        rotateAnimation.repeatCount = Float.infinity
+        refreshButton.layer.add(rotateAnimation, forKey: nil)
     }
     
     func stopLoading() {
-        hideLoading()
+        refreshButton.layer.removeAllAnimations()
+    }
+    
+    func didReceiveWeatherInfo(_ weatherInfo: MBWeatherModel) {
+        LocalStorageManager.shared.deleteWeatherInfo(weatherInfo: currentLocation!)
+        
+        currentLocation = weatherInfo
+        LocalStorageManager.shared.addWeatherInfo(weatherInfo: weatherInfo)
+        
+        populateView()
     }
 }
 
 extension CityDetailsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return detailsDictionnary.count
+        return detailsArray.count
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -99,11 +150,10 @@ extension CityDetailsViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DetailsCell", for: indexPath) as! DetailsCell
 
-        let keys: [String]      = detailsDictionnary.map({ $0.key })
-        let currentKey          = keys[indexPath.row]
+        let currentItem         = detailsArray[indexPath.row]
         
-        cell.keyLabel.text      = currentKey
-        cell.valueLabel.text    = detailsDictionnary[currentKey]
+        cell.keyLabel.text      = currentItem.key
+        cell.valueLabel.text    = currentItem.value
         cell.selectionStyle     = .none
         
         return cell

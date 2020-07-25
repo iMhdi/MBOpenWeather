@@ -31,6 +31,19 @@ public class MBWeatherManager {
         self.apiKey = apiKey
     }
     
+    public func weatherInfo(forCityId cityId:Int?, withSuccess success:@escaping (MBWeatherModel) -> Void, andFailure failure:@escaping (NSError) -> Void) {
+        
+        guard let apiKey = apiKey else {
+            return failure(NSError(domain:"MISSING_API_KEY", code:-3, userInfo:nil))
+        }
+        
+        guard let cityId = cityId else {
+            return failure(NSError(domain:"MISSING_CITY_IDENTIFIER", code:-4, userInfo:nil))
+        }
+        
+        MBRequestWrapper.requestAPI(withURL: ENDPOINT_WEATHER, method: "GET", andParameters: ["appid": apiKey, "id": "\(cityId)"], success: success, failure: failure)
+    }
+    
     public func weatherInfo(forCityName cityName:String, withSuccess success:@escaping (MBWeatherModel) -> Void, andFailure failure:@escaping (NSError) -> Void) {
         
         guard let apiKey = apiKey else {

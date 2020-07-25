@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_MBOpenWeather_ExampleVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_MBOpenWeather_ExampleVersionString[];
+FOUNDATION_EXPORT double Pods_MBOpenWeather_DemoVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_MBOpenWeather_DemoVersionString[];
 

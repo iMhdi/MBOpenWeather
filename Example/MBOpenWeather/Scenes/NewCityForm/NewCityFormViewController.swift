@@ -1,6 +1,6 @@
 //
 //  NewCityFormViewController.swift
-//  MBOpenWeather_Example
+//  MBOpenWeather_Demo
 //
 //  Created by El Mahdi Boukhris on 22/07/2020.
 //  Copyright © 2020 El Mahdi Boukhris. All rights reserved.
@@ -34,6 +34,7 @@ class NewCityFormViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        initNavigationBar()
     }
   
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +42,15 @@ class NewCityFormViewController: UIViewController {
     }
   
     // MARK: - Display logic
+    
+    func initNavigationBar() {
+        self.title = "Add city"
+        
+        let backButton = UIBarButtonItem(title: "Close", style: UIBarButtonItemStyle.plain, target: self, action: #selector(self.didCloseButton(sender:)))
+
+        self.navigationItem.leftBarButtonItem = backButton
+    }
+
   
     // MARK: - Actions
         
@@ -56,6 +66,10 @@ class NewCityFormViewController: UIViewController {
         } else {
             addCityButton.isEnabled = false
         }
+    }
+    
+    @objc func didCloseButton(sender: UIBarButtonItem) {
+        self.dismiss(animated: true)
     }
     
     // MARK: - Overrides

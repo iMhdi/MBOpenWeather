@@ -1,6 +1,6 @@
 //
 //  HomeViewController.swift
-//  MBOpenWeather_Example
+//  MBOpenWeather_Demo
 //
 //  Created by El Mahdi Boukhris on 22/07/2020.
 //  Copyright © 2020 El Mahdi Boukhris. All rights reserved.
@@ -107,14 +107,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 222.0
+        return 62.0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath) as! LocationCell
 
         let weatherInfo = LocalStorageManager.shared.savedLocations[indexPath.row]
-        cell.setLocation(withCity: weatherInfo.name, country: weatherInfo.sys?.country, latitude: weatherInfo.coord?.lat, longitude: weatherInfo.coord?.lon)
+        cell.setLocation(withCity: weatherInfo.name, country: weatherInfo.sys?.country, temperature: weatherInfo.getTemperature(in: .celsius), andIconName: weatherInfo.weather?.first?.icon)
         cell.selectionStyle = .none
         
         return cell

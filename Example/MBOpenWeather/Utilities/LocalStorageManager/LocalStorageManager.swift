@@ -1,9 +1,9 @@
 //
 //  LocalStorageManager.swift
-//  MBOpenWeather_Example
+//  MBOpenWeather_Demo
 //
 //  Created by El Mahdi Boukhris on 22/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
+//  Copyright © 2020 El Mahdi Boukhris. All rights reserved.
 //
 
 import Foundation
@@ -29,6 +29,12 @@ class LocalStorageManager: NSObject {
     
     func deleteWeatherInfo(atIndex index: Int) {
         savedLocations.remove(at: index)
+        
+        saveWeatherInfos(weatherInfoArray: savedLocations)
+    }
+    
+    func deleteWeatherInfo(weatherInfo: MBWeatherModel) {
+        savedLocations.remove(element: weatherInfo)
         
         saveWeatherInfos(weatherInfoArray: savedLocations)
     }

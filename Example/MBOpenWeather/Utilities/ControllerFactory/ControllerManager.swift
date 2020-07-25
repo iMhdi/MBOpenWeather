@@ -1,9 +1,9 @@
 //
 //  ControllerManager.swift
-//  MBOpenWeather_Example
+//  MBOpenWeather_Demo
 //
 //  Created by El Mahdi Boukhris on 22/07/2020.
-//  Copyright © 2020 CocoaPods. All rights reserved.
+//  Copyright © 2020 El Mahdi Boukhris. All rights reserved.
 //
 
 import UIKit
@@ -18,9 +18,14 @@ class ControllerFactory {
         case .cityDetails:
             let detailsController = UIViewController.newInstance(of: CityDetailsViewController())
             detailsController.currentLocation = (dataDictionary!["currentLocation"] as! MBWeatherModel)
-            return detailsController
+
+            let navController = AppNavigator(rootViewController: detailsController)
+            return navController
         case .newCityForm:
-            return UIViewController.newInstance(of: NewCityFormViewController())
+            let formController = UIViewController.newInstance(of: NewCityFormViewController())
+
+            let navController = AppNavigator(rootViewController: formController)
+            return navController
         }
     }
 }

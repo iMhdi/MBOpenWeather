@@ -12,11 +12,12 @@ Pod::Spec.new do |s|
   s.summary          = 'MBOpenWeather is a pod that uses OpenWeatherMap API to return weather information for a specific location.'
 
   s.description      = <<-DESC
-MBOpenWeather is a pod that uses OpenWeatherMap API to return weather information for a specific location.
-Available feature :
-* Weather info from CityName
-* Weather info from Coordinates
-                       DESC
+MBOpenWeather is a simple OpenWeatherMap API Wrapper that allows for :
+
+- [x] Making seemless API Calls
+- [x] Retrieving Weather information about a specified location (By ID, Coordinates or Name)
+- [x] Returning simplified, human-readable values
+DESC
 
   s.homepage         = 'https://github.com/iMhdi/MBOpenWeather'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
